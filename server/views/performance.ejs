@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Android自动化测试</title>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-header">
+    <a href="terminals">
+        <h1>Android自动化测试</h1>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <p>测试记录</p>
+        <ul class="nav nav-pills nav-stacked">
+            <li>
+                <a href="terminals">终端列表</a>
+            </li>
+            <li>
+                <a href="general">概况</a>
+            </li>
+            <li>
+                <a href="problem">问题报告</a>
+            </li>
+            <li class="active">
+                <a href="performance">性能报告</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-10">
+    <div id="time" align="right">测试时间：<strong><%= time %></strong></div>
+<hr></hr>
+        <!-- cpu占用率 -->
+        <div class="col-lg-4">
+            <h3>cpu占用率：<strong><%= cpu_rate %></strong> %</h3>
+        </div>
+<!--<br></br><hr></hr>-->
+        <div class="col-lg-8">
+            <div id="cpu" style="height:300px;"></div>
+        </div>
+<br></br><hr></hr>
+
+        <!-- 内存占用率 -->
+        <div class="col-lg-12">
+            <h3>内存占用率：<strong><%= memory %></strong> kB </h3>
+        </div>
+<!--<br></br><hr></hr>-->
+       <!-- <div class="col-lg-8">
+            <div id="memory" style="height:300px"></div>
+        </div>-->
+	<br></br><hr></hr>
+
+        <!-- 电池温度 -->
+        <div class="col-lg-4">
+            <h3>电池温度：<strong><%= temperature %></strong> ℃</h3>
+        </div>
+        <!--<div class="col-lg-8">
+            <div id="temperature" style="height:300px"></div>
+    </div>-->
+    </div>
+</div>
+
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+
+<script src="javascripts/echarts.js"></script>
+ <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+ <script type="text/javascript" src="javascripts/cpuchart.js"></script>
+<!--    <script type="text/javascript" src="javascripts/memory.js"></script>
+    <script type="text/javascript" src="javascripts/temperature.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Android自动化测试</title>
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<meta charset="utf-8">
+	<div class="page-header">
+		<a href="terminals">
+			<h1>Android自动化测试</h1>
+		</a>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-2">
+			<p>测试记录</p>
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active">
+					<a href="terminals">终端列表</a>
+				</li>
+				<li>
+					<a href="general">概况</a>
+				</li>
+				<li>
+					<a href="problem">问题报告</a>
+				</li>
+				<li>
+					<a href="performance">性能报告</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-lg-10">
+			<h3>已连接以下设备：</h3>
+
+			<table class="table table-bordered table-hover">
+				<caption> <strong><%= productModel %></strong>
+				</caption>
+				<tbody>
+					<tr>
+						<td colspan="2">终端型号</td>
+						<td colspan="4"><%= productModel %></td>
+						<td colspan="2">设备制造商</td>
+						<td colspan="4"><%= manufacturer %></td>
+						<td colspan="2">具体型号</td>
+						<td colspan="4"><%= model_id %></td>
+					</tr>
+					<tr class="active">
+						<td colspan="2">CPU 架构</td>
+						<td colspan="4"><%= cpu %></td>
+						<td colspan="2">操作系统</td>
+						<td colspan="4">Android <%= systemVersion %></td>
+						<td colspan="2">IMEI</td>
+						<td colspan="4"><%= productIMEI %></td>
+					</tr>
+					<tr class="success">
+						<td colspan="2">屏幕ppi</td>
+						<td colspan="4"><%= density %></td>
+						<td colspan="2">屏幕分辨率</td>
+						<td colspan="4"><%= display %></td>
+						<td colspan="2">Wifi 状态</td>
+						<td colspan="4"><%= wlanState %></td>
+					</tr>
+					<tr  class="warning">
+						<td colspan="2">物理内存</td>
+						<td colspan="4"><%= totalMem %>MB(<%= freeMem %>MB)</td>
+						<td colspan="2">电池电量</td>
+						<td colspan="4"><%= batteryLevel %></td>
+						<td colspan="2">测试完成时间</td>
+						<td colspan="4"><%= time %></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+		<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>
